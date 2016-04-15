@@ -2,6 +2,13 @@
 import json
 
 
+clients_data = '''
+[
+   {"name": "admin", "password": "password"}
+]
+'''
+
+
 users = []
 
 
@@ -21,6 +28,5 @@ def get_user(name):
 
 def init_users():
     global users
-    with open('config/clients.json', 'r') as f:
-        clients = json.load(f)
-        users.extend([User(c['name'], c['password']) for c in clients])
+    clients = json.loads(clients_data)
+    users.extend([User(c['name'], c['password']) for c in clients])
