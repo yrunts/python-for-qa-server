@@ -1,5 +1,6 @@
 
 from flask import Flask
+from flask import current_app, abort, request, render_template, make_response
 
 from server.security import security_bp, auth_token_required
 from server import models
@@ -25,4 +26,14 @@ def _index():
 
 @auth_token_required
 def _data():
-    return ''
+    if current_app.user.name != 'admin':
+        abort(401, 'admin required')
+
+    match = request.accept_mimetypes.best_match(['application/json',
+                                                'application/xml'])
+    template = 'test.xml' if match == 'application/xml' else 'test.json'
+    data = render_template(template)
+    response = make_response(data)
+    response.headers['Content-Type'] = match
+
+    return response

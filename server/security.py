@@ -7,7 +7,7 @@ from flask import Blueprint, current_app, jsonify, request, abort
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import BadSignature, SignatureExpired
 
-from server.models import User, get_user
+from server.models import get_user
 
 
 auth = HTTPBasicAuth()
@@ -62,5 +62,5 @@ def verify_auth_token(token):
         return None
     except BadSignature:
         return None
-    user = User.query.get(data['id'])
+    user = get_user(data['name'])
     return user
