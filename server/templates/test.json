@@ -319,7 +319,7 @@
     "index": 7,
     "guid": "2111a4b2-4f38-4083-9a45-07e20c7aa1f5",
     "isActive": false,
-    "balance": "$2,867.35",
+    "balance": "$3,867.35",
     "picture": "http://placehold.it/32x32",
     "age": 30,
     "eyeColor": "green",
@@ -491,7 +491,7 @@
         "name": "Lucinda Mclaughlin"
       }
     ],
-    "greeting": "Hello, Barber Jimenez! You have 8 unread messages.",
+    "greeting": "Hello, Barber Jimenez! You have 9 unread messages.",
     "favoriteFruit": "strawberry"
   },
   {
@@ -750,7 +750,7 @@
     "friends": [
       {
         "id": 0,
-        "name": "Patsy Puckett"
+        "name": "Patsy Puckkett"
       },
       {
         "id": 1,
@@ -3687,7 +3687,7 @@
       }
     ],
     "greeting": "Hello, Valerie Sears! You have 5 unread messages.",
-    "favoriteFruit": "strawberry"
+    "favoriteFruit": "whisky"
   },
   {
     "_id": "5718d66ea3b17db3daec6834",
